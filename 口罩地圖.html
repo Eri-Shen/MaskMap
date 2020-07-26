@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>臺灣口罩販賣地圖</title>
+</head>
+<body>
+    <div id="mapid"></div>
+    <div class="menu">
+        <div class="menu--collapse"><</div>
+        <div class="menu__top">
+            <div class="menu__top__title">購買口罩即時查詢地圖</div>
+            <div class="menu__bottom">
+                <div class="menu__bottom__left">
+                    <div id ="date" class="menu__bottom__left__subtitle">2020年3月8日</div>
+                    <div class="menu__bottom__left__title"><span  id="day" class="font--hightlight"></span>購買日</div>
+                </div>
+                <div class="menu__bottom__right">每人每次限購成人口罩2片或兒童口罩4片，每7天限購買1次。</div>
+            </div>
+        </div>
+        <div class="menu__option">
+            <button id="searchlocate" class="btn-prmiary">定位搜尋您2公里內的藥局</button>
+            <!-- <div class="menu__option__title">目前位置：<span id="location"></span></div> -->
+            <!-- <input class="menu__option__input" type="text"> -->
+            <div>請輸入您要收尋口罩的地區</div>
+            <div class="menu__option__l-select">
+                <select id="country" class="menu__option__select">
+                    <option value="臺北市">臺北市</option>
+                    <option value="澎湖縣">澎湖縣</option>
+                    <option value="臺南市">臺南市</option>
+                    <option value="臺東縣">臺東縣</option>
+                    <option value="臺中市">臺中市</option>
+                    <option value="彰化縣">彰化縣</option>
+                    <option value="嘉義縣">嘉義縣</option>
+                    <option value="嘉義市">嘉義市</option>
+                    <option value="新竹縣">新竹縣</option>
+                    <option value="新竹市">新竹市</option>
+                    <option value="新北市">新北市</option>
+                    <option value="雲林縣">雲林縣</option>
+                    <option value="連江縣">連江縣</option>
+                    <option value="基隆市">基隆市</option>
+                    <option value="高雄市">高雄市</option>
+                    <option value="桃園市">桃園市</option>
+                    <option value="苗栗縣">苗栗縣</option>
+                    <option value="屏東縣">屏東縣</option>
+                    <option value="南投縣">南投縣</option>
+                    <option value="金門縣">金門縣</option>
+                    <option value="花蓮縣">花蓮縣</option>
+                    <option value="宜蘭縣">宜蘭縣</option>
+                </select>
+                <select id="town" class="menu__option__select">
+                    <option value="鄉政市區" selected>鄉鎮市區</option>
+                </select>
+                <select id="mask" class="menu__option__select">
+                    <option value="全部">所有口罩</option>
+                    <option value="成人">成人口罩</option>
+                    <option value="兒童">兒童口罩</option>
+                </select>
+                <button id="search" class="btn-prmiary">搜尋</button>
+            </div>
+        </div>
+        <div id="insert" class="menu__content">
+        </div>
+    </div>
+</body>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCY3DuvZloSiHQVg4jV3J6ps3Vy6q1WO7Q"></script>
+<script src="js/taiwan.js" type="text/javascript"></script>
+</html>
